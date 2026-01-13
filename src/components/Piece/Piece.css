@@ -1,0 +1,40 @@
+#card {
+    width: 400px;
+    box-shadow: 5px 5px 5px grey;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px 5px 5px 50px;
+    display: flex;
+}
+
+#rowFirst {
+    border-bottom: solid 1px black;
+    margin: 40px 0px;
+}
+
+#rowSecond {
+    display: flex;
+
+}
+
+* {
+    font-family: sans-serif;
+    margin: 5px;
+    padding: 5px;
+}
+
+.tags {
+    font-style: italic;
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    letter-spacing: 10pt;
+    border-bottom: solid 1px black;
+}
+
+#image {
+    height: 100px;
+}

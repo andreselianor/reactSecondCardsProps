@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ficha Mahjong 3D tipo Ladrillo</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0e9f5;
+    perspective: 1200px; /* perspectiva global */
+    font-family: sans-serif;
+  }
+
+  .mahjong-container {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .mahjong-tile {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Frente */
+  .tile-front {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(145deg, #fff, #fefefe);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #e63946;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateZ(20px);
+  }
+
+  /* Fondo */
+  .tile-back {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background: #fff7e6; /* canto crema */
+    border-radius: 20px;
+    transform: translateZ(-20px);
+  }
+
+  /* Lados verticales */
+  .tile-left, .tile-right {
+    position: absolute;
+    width: 40px; /* grosor del ladrillo */
+    height: 200px;
+    background: blue;
+    top: 0;
+  }
+
+  .tile-left {
+    left: 60px;
+    transform: rotateY(90deg) translateZ(-75px);
+    border-radius: 20px 0 0 20px;
+  }
+
+  .tile-right {
+    right: 60px;
+    transform: rotateY(90deg) translateZ(75px);
+    border-radius: 0 20px 20px 0;
+  }
+
+  /* Lados horizontales */
+  .tile-top, .tile-bottom {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background: blue;
+    left: 0;
+  }
+
+  .tile-top {
+    top: 80px;
+    transform: rotateX(90deg) translateZ(100px);
+    border-radius: 20px 20px 0 0;
+  }
+
+  .tile-bottom {
+    bottom: 80px;
+    transform: rotateX(90deg) translateZ(-100px);
+    border-radius: 0 0 20px 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="mahjong-container">
+  <div class="mahjong-tile">
+    <div class="tile-front">B</div>
+    <div class="tile-back"></div>
+    <div class="tile-left"></div>
+    <div class="tile-right"></div>
+    <div class="tile-top"></div>
+    <div class="tile-bottom"></div>
+  </div>
+</div>
+
+<script>
+const tile = document.querySelector('.mahjong-tile');
+
+function rotateTile(e) {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  const dx = e.clientX - centerX;
+  const dy = e.clientY - centerY;
+
+  const rotateY = (dx / centerX) * 50;
+  const rotateX = (-dy / centerY) * 50;
+
+  tile.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+}
+
+document.addEventListener('mousemove', rotateTile);
+
+tile.addEventListener('mouseleave', () => {
+  tile.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
+</script>
+
+</body>
+</html>
