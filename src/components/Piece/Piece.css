@@ -1,5 +1,11 @@
+* {
+    font-family: sans-serif;
+    margin: 5px;
+    padding: 5px;
+}
+
 #card {
-    width: 400px;
+    width: 500px;
     box-shadow: 5px 5px 5px grey;
     padding: 20px;
     margin: 50px;
@@ -17,12 +23,6 @@
     display: flex;
 }
 
-* {
-    font-family: sans-serif;
-    margin: 5px;
-    padding: 5px;
-}
-
 .tags {
     font-style: italic;
     font-size: 8pt;
@@ -35,12 +35,21 @@
     font-style: italic;
 }
 
+.text {
+    font-weight: bold;
+    font-family: math;
+}
+
+.description {
+    font-size: 10pt;
+}
+
 #images {
-    place-content: center;
+    place-content: top center;
 }
 
 #image {
-    height: 100px;
+    height: 150px;
     box-shadow: 10px 10px 10px grey;
     background-color: white;
 }
