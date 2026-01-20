@@ -1,7 +1,7 @@
-import './Piece.css'
+import './Tarjeta.css'
 import { useRef, useEffect } from 'react'
 
-function Piece({
+function Tarjeta({
     title,
     text,
     description,
@@ -38,4 +38,4 @@ function Piece({
     )
 }
 
-export default Piece;
+export default Tarjeta;

@@ -1,6 +1,6 @@
 import './styles/App.css'
 import { useEffect, useState } from 'react'
-import Piece from './components/Piece/Piece'
+import Tarjeta from './components/Tarjeta/Tarjeta'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -30,7 +30,7 @@ function App() {
       <Header />
       <div id="content">
         <main>
-          <Piece
+          <Tarjeta
             title="·Mahjong·"
             text="🐉 juego del mahjong"
             description="El mahjong es un juego de origen milenario que combina estrategia, observación y un toque de azar, donde cada partida es diferente. Con fichas llenas de simbolismo y decisiones constantes, invita tanto a principiantes como a curiosos."
@@ -40,7 +40,7 @@ function App() {
             rotateY={rotation.y * 0.3}
           />
 
-          <Piece
+          <Tarjeta
             title="· Dragon ·"
             text="🀄 dragon rojo"
             description="Una ficha poderosa que simboliza la suerte y la energía en el mahjong, fácil de reconocer y emocionante de jugar. Representa esos momentos clave en los que una sola jugada puede cambiar toda la partida."
@@ -50,7 +50,7 @@ function App() {
             rotateY={rotation.y * 0.4}
           />
 
-          <Piece
+          <Tarjeta
             title="· Dragon ·"
             text="🀅 dragon verde"
             description="Asociado al crecimiento y la estrategia, el Dragón Verde añade un toque de misterio y equilibrio al juego. Es una pieza que premia la paciencia y hace que cada decisión se sienta importante."
@@ -60,7 +60,7 @@ function App() {
             rotateY={rotation.y * 0.5}
           />
 
-          <Piece
+          <Tarjeta
             title="· Dragon ·"
             text="🀆 dragon blanco"
             description="Minimalista y elegante, el Dragón Blanco destaca por su simplicidad y simboliza la claridad mental y la precisión. Perfecto para quienes disfrutan de un juego donde el ingenio vale más que la fuerza."
@@ -70,7 +70,7 @@ function App() {
             rotateY={rotation.y * 0.6}
           />
 
-          <Piece
+          <Tarjeta
             title="·Endgame·"
             text="🀙 final de partida"
             description="El final de una partida de mahjong es el momento en que toda la tensión acumulada cobra sentido y las estrategias se revelan. Entre expectación y emoción, una última ficha puede definir al ganador y dejar a todos con ganas de volver a jugar."
